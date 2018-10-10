@@ -7,6 +7,8 @@
                 <hr>
                 <h1>Custom directive</h1>
                 <p v-highlight:background.delayed="'red'">Highlighted</p>
+                <hr>
+                <button v-listen:click="clicked">Test</button>
             </div>
         </div>
     </div>
@@ -14,6 +16,11 @@
 
 <script>
     export default {
+        methods: {
+            clicked() {
+                alert('clicked');
+            }
+        }
     }
 </script>
 
